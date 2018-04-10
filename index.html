@@ -79,6 +79,8 @@
 		        
 					<a class="weibo" target="_blank" href="https://weibo.com/2310577225/profile?topnav=1&wvr=6&is_all=1" title="weibo"><i class="icon-weibo"></i></a>
 		        
+					<a class="mail" target="_blank" href="mailto:347558464@qq.com" title="mail"><i class="icon-mail"></i></a>
+		        
 			</div>
 		</nav>
 	</header>		
@@ -113,6 +115,8 @@
 						<a class="github" target="_blank" href="https://github.com/liangzhanncu" title="github"><i class="icon-github"></i></a>
 			        
 						<a class="weibo" target="_blank" href="https://weibo.com/2310577225/profile?topnav=1&wvr=6&is_all=1" title="weibo"><i class="icon-weibo"></i></a>
+			        
+						<a class="mail" target="_blank" href="mailto:347558464@qq.com" title="mail"><i class="icon-mail"></i></a>
 			        
 				</div>
 			</nav>
@@ -158,75 +162,10 @@
       
         <blockquote><p>采用Hexo+github pages搭建个人博客</p>
 <footer><strong>liangzhan</strong><cite><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">来源Hexo</a></cite></footer></blockquote>
-<p>&nbsp;1.前言<br>&ensp;&ensp;&ensp;&ensp;&ensp;前两天看到黎同学的博客后，忍不住自己想搭一个。搭好博客后总是想着写点神马。那就把Hexo+github         pages搭建个人博客的过程写一下，以供大家参考吧！</p>
-<p>&nbsp;2.Hexo简介<br>&ensp;&ensp;&ensp;&ensp;&ensp;Hexo是一个快速、简洁且高效的博客框架。Hexo使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p>&nbsp;3.安装前提git和node.js<br>&ensp;&ensp;&ensp;&ensp;&ensp;安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：<br>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://nodejs.org/en/" title="node.js" target="_blank" rel="noopener">node.js</a><br>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://git-scm.com/" title="git" target="_blank" rel="noopener">git</a><br>&ensp;&ensp;&ensp;&ensp;&ensp;如果你的电脑中已经安装了这两样，那么接下来在终端执行下面的指令即可进行hexo的安装。</p>
-<blockquote>
-<p>npm install -g hexo-cli</p>
-</blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;如果没有安装git和node.js的话，可以查看<a href="https://hexo.io/zh-cn/docs/index.html" title="hexo" target="_blank" rel="noopener">git和node.js安装</a>，这里不进行过多的阐述。</p>
-<p>&nbsp;4. 建立网站<br>&ensp;&ensp;&ensp;&ensp;&ensp;安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
-<blockquote>
-<p>hexo init folder<br>cd folder<br>npm install<br>注明：folder为用户自己命名指定的文件夹，用于存放网站文件</p>
-</blockquote>
-<p>新建完成后，通过cd进入上面建立网站的folder目录。执行以下指令，然后在浏览器打开<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000</a>即可浏览到Hexo博客的样式了。</p>
-<blockquote>
-<p>hexo server</p>
-</blockquote>
-<p>创建成功后用户指定的文件夹目录结构如下：</p>
-<blockquote>
-<p>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes</p>
-</blockquote>
-<p>首先配置_config.yml，这里需要注意的是，每一项配置”:”的后面都要留下一个空格。不然编译不通过。<br><img src="/myimage/blogExample1.png"><br>以下为_config.yml主要配置：</p>
-<blockquote>
-<p>title: &ensp;这里填写博客的名称<br>subtitle: &ensp;填写座右铭<br>author: &ensp;你的名字<br>……<br>deploy:<br>type: git<br>repository: github远程仓库的名字（下面将会说明如何获取）<br>branch: master</p>
-</blockquote>
-<p>配置完成记得保存。更多相关属性详见<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">配置</a></p>
-<p>&nbsp;5.GitHub<br>&ensp;&ensp;&ensp;&ensp;&ensp;如果没有账号就注册一个。登录后新建一个repository。命名方式为xx.github.io,其中xx必须为你的github账户名。创建成功后把你的仓库HTTPS或者SSH的URL复制下来填入_config.yml中的&ensp;repository:&ensp;URL保存即可。<br><img src="/myimage/blogrepository.png"></p>
-<p>&nbsp;6.提交更改<br>&ensp;&ensp;&ensp;&ensp;&ensp;通过以下指令新建一篇名为My New Post的博文。执行成功后，进入网站文件存放目录下的/source/_posts/中，你会发现多了一个名为My New Post.md的文件。</p>
-<blockquote>
-<p>hexo new “My New Post”</p>
-</blockquote>
-<p>My New Post.md的文件，用文本编辑器软件打开，内容如下：</p>
-<blockquote>
-<p>title: &ensp;博客标题<br>date: 2018-04-10 09:55:02<br>comments:<br>tags: &ensp;定义这条博客的标签<br>categories: &ensp;定义这条博客的分类</p>
-</blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;这条博客的内容也直接写在此文件中。推荐采用Cmd Markdown来编辑此文件。编辑完成之后，执行以下指令后，在浏览器输入地址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>即可在本地查看到写好的博文了。</p>
-<blockquote>
-<p>hexo clean<br>hexo generate<br>hexo server</p>
-</blockquote>
-<p>&nbsp;7.部署到GitHub上<br>&ensp;&ensp;&ensp;&ensp;&ensp;在步骤5过程中，我们已经配置好了GitHub远程仓库。所以终端执行以下指令，shu你的GitHub账号，密码后即可更新博客到GitHub上。</p>
-<blockquote>
-<p>hexo deploy</p>
-</blockquote>
-<p>当出现以下提示时，表明提交成功！</p>
-<blockquote>
-<p>INFO  Deploy done: git</p>
-</blockquote>
-<p>打开GitHub，进入远程仓库，点击setting，往下拉，在GitHub Pages处会提示Your site is published at http://你的GitHub账号.github.io/，这就是你的博客地址了。 提交的话需要等会才会显示网站。</p>
-<p>hexo deploy后可能会出现以下错误：</p>
-<blockquote>
-<p>ERROR Deployer not found : github </p>
-</blockquote>
-<p>这时终端输入以下命令后再进行hexo g，hexo d即可：</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save</p>
-</blockquote>
-<p>截图展示：</p>
-<blockquote>
-<p>setting</p>
-</blockquote>
-<img src="/myimage/bloggithubsetting.png">
-<blockquote>
-<p>往下拉页面即可看到GitHub Pages</p>
-</blockquote>
-<img src="/myimage/bloggithubpage.png">
-<blockquote>
-<p>我搭好的博客</p>
-</blockquote>
-<img src="/myimage/mygithubblog.png">
-<p>&nbsp;8.可能出现的问题<br>&nbsp;今天先写这些，有问题可以在评论区交流。</p>
-
+<p>&nbsp;1.前言<br>&ensp;&ensp;&ensp;&ensp;&ensp;前两天看到黎同学的博客后，忍不住自己想搭一个。搭好博客后总是想着写点神马。那就把Hexo+github         pages搭建个人博客的过程写一下，以供大家参考吧！<br>
+        
+          <a class="article-more-a" href="/2018/04/10/采用Hexo-github-pages搭建个人博客/#more">more >></a>
+        
       
 
       
@@ -261,6 +200,92 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/04/10/采用Hexo-github-pages搭建个人博客/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post- Hello world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/04/10/ Hello world/">Hello world</a>
+    </h1>
+  
+
+        
+        <a href="/2018/04/10/ Hello world/" class="archive-article-date">
+  	<time datetime="2018-04-10T01:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote><p>Hello world</p>
+<footer><strong>liangzhan</strong></footer></blockquote>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Hello world</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+		<i class="icon-book icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="/categories/Hello-world//" class="article-tag-list-link color2">Hello world</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/04/10/ Hello world/">展开全文 >></a>
         </p>
       
 
@@ -383,6 +408,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Hello world</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
               </li>
             
@@ -446,7 +475,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">目前&lt;br&gt;&lt;br&gt;深圳从事Android应用开发&lt;br&gt;谢谢大家！</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">目前&lt;br&gt;&lt;br&gt;深圳卖马为生&lt;br&gt;谢谢大家！</div>
   	  	
     	</section>
     
