@@ -159,7 +159,7 @@
         <blockquote><p>采用Hexo+github pages搭建个人博客</p>
 <footer><strong>liangzhan</strong><cite><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">来源Hexo</a></cite></footer></blockquote>
 <ol>
-<li>前言<br>&ensp;&ensp;&ensp;&ensp;&ensp;前两天看到黎同学的博客后，忍不住自己想搭一个，搭好博客后总是想着写点神马。那就把Hexo+github         pages搭建个人博客的过程写一下，以供大家参考吧！</li>
+<li>前言<br>&ensp;&ensp;&ensp;&ensp;&ensp;前两天看到黎同学的博客后，忍不住自己想搭一个。搭好博客后总是想着写点神马。那就把Hexo+github         pages搭建个人博客的过程写一下，以供大家参考吧！</li>
 <li>Hexo简介<br>&ensp;&ensp;&ensp;&ensp;&ensp;Hexo是一个快速、简洁且高效的博客框架。Hexo使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</li>
 <li>安装前提git和node.js<br>&ensp;&ensp;&ensp;&ensp;&ensp;安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：<br>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://nodejs.org/en/" title="node.js" target="_blank" rel="noopener">node.js</a><br>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://git-scm.com/" title="git" target="_blank" rel="noopener">git</a><br>&ensp;&ensp;&ensp;&ensp;&ensp;如果你的电脑中已经安装了这两样，那么接下来在终端执行下面的指令即可进行hexo的安装。<blockquote>
 <p>npm install -g hexo-cli</p>
@@ -181,7 +181,7 @@
 </blockquote>
 <p>首先配置_config.yml，这里需要注意的是，每一项配置”:”的后面都要留下一个空格。不然编译不通过。<br><img src="/myimage/blogExample1.png"><br>以下为_config.yml主要配置：</p>
 <blockquote>
-<p>title: &ensp;这里填写博客的名称<br>subtitle: &ensp;填写座右铭<br>author: &ensp;你的名字<br>……<br>deploy:<br>type: git<br>repository: github远程仓库的名字（下面会将如何获取）<br>branch: master</p>
+<p>title: &ensp;这里填写博客的名称<br>subtitle: &ensp;填写座右铭<br>author: &ensp;你的名字<br>……<br>deploy:<br>type: git<br>repository: github远程仓库的名字（下面将会说明如何获取）<br>branch: master</p>
 </blockquote>
 <p>配置完成记得保存。更多相关属性详见<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">配置</a></p>
 <p>&nbsp;5. GitHub<br>&ensp;&ensp;&ensp;&ensp;&ensp;如果没有账号就注册一个。登录后新建一个repository。命名方式为xx.github.io,其中xx必须为你的github账户名。创建成功后把你的仓库HTTPS或者SSH的URL复制下来填入_config.yml中的&ensp;repository:&ensp;URL保存即可。<br><img src="/myimage/blogrepository.png"></p>
@@ -193,11 +193,11 @@
 <blockquote>
 <p>title: &ensp;博客标题<br>date: 2018-04-10 09:55:02<br>comments:<br>tags: &ensp;定义这条博客的标签<br>categories: &ensp;定义这条博客的分类</p>
 </blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;这条博客的内容也直接写在此文件中。推荐采用Cmd Markdown来编辑此文件。编辑完成之后，执行以下指令后，在浏览器打开<a href="http://localhost:4000即可在本地查看到写好的博文了。" target="_blank" rel="noopener">http://localhost:4000即可在本地查看到写好的博文了。</a></p>
+<p>&ensp;&ensp;&ensp;&ensp;&ensp;这条博客的内容也直接写在此文件中。推荐采用Cmd Markdown来编辑此文件。编辑完成之后，执行以下指令后，在浏览器输入地址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>即可在本地查看到写好的博文了。</p>
 <blockquote>
 <p>hexo clean<br>hexo generate<br>hexo server</p>
 </blockquote>
-<p>&nbsp;7.部署到GitHub上<br>&ensp;&ensp;&ensp;&ensp;&ensp;在步骤五的过程中，我们已经配置好了GitHub远程仓库。所以执行以下指令，shu你的GitHub账号，密码后即可更新博客到GitHub上。</p>
+<p>&nbsp;7.部署到GitHub上<br>&ensp;&ensp;&ensp;&ensp;&ensp;在步骤5过程中，我们已经配置好了GitHub远程仓库。所以执行以下指令，shu你的GitHub账号，密码后即可更新博客到GitHub上。</p>
 <blockquote>
 <p>hexo deploy</p>
 </blockquote>
@@ -205,7 +205,8 @@
 <blockquote>
 <p>INFO  Deploy done: git</p>
 </blockquote>
-<p>打开GitHub，进入远程仓库，点击setting，往下拉，在GitHub Pages处会提示Your site is published at http://你的GitHub账号.github.io/，这就是你的博客地址了。 提交的话需要等会才会显示网站。<br><img src="/myimage/bloggithubsetting"><br><img src="/myimage/bloggithubpage"></p>
+<p>打开GitHub，进入远程仓库，点击setting，往下拉，在GitHub Pages处会提示Your site is published at http://你的GitHub账号.github.io/，这就是你的博客地址了。 提交的话需要等会才会显示网站。<br><img src="/myimage/bloggithubsetting.png"><br><img src="/myimage/bloggithubpage.png"><br><img src="/myimage/mygithubblog.png"></p>
+<p>&nbsp;8.可能出现的问题<br>&nbsp;今天先写这些，有问题可以在评论区交流。</p>
 
       
 
