@@ -21,7 +21,7 @@
 <meta property="og:image" content="http://yoursite.com/myimage/bloggithubsetting.png">
 <meta property="og:image" content="http://yoursite.com/myimage/bloggithubpage.png">
 <meta property="og:image" content="http://yoursite.com/myimage/mygithubblog.png">
-<meta property="og:updated_time" content="2018-04-10T09:25:27.174Z">
+<meta property="og:updated_time" content="2018-04-10T11:26:38.721Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="采用Hexo+github pages搭建个人博客">
 <meta name="twitter:description" content="采用Hexo+github pages搭建个人博客 liangzhan来源Hexo &amp;nbsp;1.前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;前两天看到黎同学的博客后，忍不住自己想搭一个。搭好博客后总是想着写点神马。那就把Hexo+github         pages搭建个人博客的过程写一下，以供大家参考吧！ &amp;nbsp;2.Hexo简介&amp;ensp;&amp;ensp;&amp;ensp">
@@ -191,7 +191,7 @@
 <p>title: &ensp;这里填写博客的名称<br>subtitle: &ensp;填写座右铭<br>author: &ensp;你的名字<br>……<br>deploy:<br>type: git<br>repository: github远程仓库的名字（下面将会说明如何获取）<br>branch: master</p>
 </blockquote>
 <p>配置完成记得保存。更多相关属性详见<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">配置</a></p>
-<p>&nbsp;5. GitHub<br>&ensp;&ensp;&ensp;&ensp;&ensp;如果没有账号就注册一个。登录后新建一个repository。命名方式为xx.github.io,其中xx必须为你的github账户名。创建成功后把你的仓库HTTPS或者SSH的URL复制下来填入_config.yml中的&ensp;repository:&ensp;URL保存即可。<br><img src="/myimage/blogrepository.png"></p>
+<p>&nbsp;5.GitHub<br>&ensp;&ensp;&ensp;&ensp;&ensp;如果没有账号就注册一个。登录后新建一个repository。命名方式为xx.github.io,其中xx必须为你的github账户名。创建成功后把你的仓库HTTPS或者SSH的URL复制下来填入_config.yml中的&ensp;repository:&ensp;URL保存即可。<br><img src="/myimage/blogrepository.png"></p>
 <p>&nbsp;6.提交更改<br>&ensp;&ensp;&ensp;&ensp;&ensp;通过以下指令新建一篇名为My New Post的博文。执行成功后，进入网站文件存放目录下的/source/_posts/中，你会发现多了一个名为My New Post.md的文件。</p>
 <blockquote>
 <p>hexo new “My New Post”</p>
@@ -204,7 +204,7 @@
 <blockquote>
 <p>hexo clean<br>hexo generate<br>hexo server</p>
 </blockquote>
-<p>&nbsp;7.部署到GitHub上<br>&ensp;&ensp;&ensp;&ensp;&ensp;在步骤5过程中，我们已经配置好了GitHub远程仓库。所以执行以下指令，shu你的GitHub账号，密码后即可更新博客到GitHub上。</p>
+<p>&nbsp;7.部署到GitHub上<br>&ensp;&ensp;&ensp;&ensp;&ensp;在步骤5过程中，我们已经配置好了GitHub远程仓库。所以终端执行以下指令，shu你的GitHub账号，密码后即可更新博客到GitHub上。</p>
 <blockquote>
 <p>hexo deploy</p>
 </blockquote>
@@ -213,6 +213,15 @@
 <p>INFO  Deploy done: git</p>
 </blockquote>
 <p>打开GitHub，进入远程仓库，点击setting，往下拉，在GitHub Pages处会提示Your site is published at http://你的GitHub账号.github.io/，这就是你的博客地址了。 提交的话需要等会才会显示网站。</p>
+<p>hexo deploy后可能会出现以下错误：</p>
+<blockquote>
+<p>ERROR Deployer not found : github </p>
+</blockquote>
+<p>这时终端输入以下命令后再进行hexo g，hexo d即可：</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<p>截图展示：</p>
 <blockquote>
 <p>setting</p>
 </blockquote>
@@ -542,7 +551,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">目前&lt;br&gt;&lt;br&gt;深圳从事Android应用开发&lt;br&gt;谢谢大家！</div>
   	  	
     	</section>
     
