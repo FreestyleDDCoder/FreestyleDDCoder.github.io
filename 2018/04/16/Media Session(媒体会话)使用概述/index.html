@@ -16,7 +16,7 @@
 <meta property="og:site_name" content="LiangZhan_Blog">
 <meta property="og:description" content="liangzhan  1.前言上一篇博文中已经了解了Android中的多媒体与及其架构，也知道了界面与播放器之间是通过媒体控制和媒体会话之间的回调来进行数据的传输与控制。在这一篇博文中，将会了解媒体会话的使用相关知识。">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-16T03:34:14.706Z">
+<meta property="og:updated_time" content="2018-04-16T03:41:56.523Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Media Session(媒体会话)使用概述">
 <meta name="twitter:description" content="liangzhan  1.前言上一篇博文中已经了解了Android中的多媒体与及其架构，也知道了界面与播放器之间是通过媒体控制和媒体会话之间的回调来进行数据的传输与控制。在这一篇博文中，将会了解媒体会话的使用相关知识。">
@@ -176,12 +176,16 @@
 <li>The transport state 传输状态(播放器是否正在播放/暂停/缓冲等)</li>
 <li>当适当的时候出现错误的代码和任意的错误信息。</li>
 <li>The player position 播放器位置</li>
-<li>有效的controller actions，能够处理当前状态。<br>(2)MediaMetadataCompat,描述正在播放的数据源：</li>
+<li>有效的controller actions，能够处理当前状态。</li>
+</ul>
+<p>(2)MediaMetadataCompat,描述正在播放的数据源：</p>
+<ul>
 <li>艺术家，专辑和曲目的名称</li>
 <li>曲目的持续时间</li>
 <li>在屏锁界面上显示专辑封面。该图像是一个最大尺寸为320×320dp的位图（如果较大则缩小）</li>
-<li>它的一个实例<a href="https://developer.android.google.cn/reference/android/content/ContentUris.html" target="_blank" rel="noopener">ContentUris</a>指向更大版本的插图封面。<br>播放状态和元数据可以在整个媒体会话中发生改变。每当播放状态或者元数据发生改变的时候，必须为其对应的类使用相应的构建器builder，PlaybackStateCompat.Builder()或者MediaMetadataCompat.Builder(), 然后通过调用setPlaybackState()或者setMetaData()来把新的实例传递给媒体会话MediaSession。为了减少这些频繁的操作，这里建议最好创建一次构建器builder，然后在整个会话的整个声明周期中重用它。</li>
+<li>它的一个实例<a href="https://developer.android.google.cn/reference/android/content/ContentUris.html" target="_blank" rel="noopener">ContentUris</a>指向更大版本的插图封面。</li>
 </ul>
+<p>播放状态和元数据可以在整个媒体会话中发生改变。每当播放状态或者元数据发生改变的时候，必须为其对应的类使用相应的构建器builder，PlaybackStateCompat.Builder()或者MediaMetadataCompat.Builder(), 然后通过调用setPlaybackState()或者setMetaData()来把新的实例传递给媒体会话MediaSession。为了减少这些频繁的操作，这里建议最好创建一次构建器builder，然后在整个会话的整个声明周期中重用它。</p>
 <p>4.状态和错误<br>这里注意，PlaybackState是一个包含了用于媒体会话(getState()获取)播放状态的唯一值对象，并且必要的时候还包含关联错误代码(getErrorCode()获取)。这些错误可能是致命的也可能是非致命的。无论何时当播放中断，我们都应该生成一个致命错误：将传输状态设置为STATE_ERROR并指定相关的错误setErrorMessage(int, CharSequence)。如果播放被错误阻塞了，PlaybackState应该接着报告STATE_ERROR和错误。当应用程序无法处理请求，但仍然可以继续播放，则此时发生非致命错误：传输保持“正常”状态（如STATE_PLAYING），但PlaybackState存在着错误代码。例如，如果上一首歌曲正在播放，并且用户请求跳到下一首歌曲，则可以继续播放，但这里应该创建一个新的PlaybackState错误代码ERROR_CODE_END_OF_QUEUE然后再调用setPlaybackState()。连接到媒体会话的媒体控制器将接收回调onPlaybackStateChanged()并向用户解释发生了什么。非致命错误应该只在发生时报告一次。下一次媒体会话更新时，PlaybackState不要再次设置相同的非致命错误（除非响应新请求发生错误）。</p>
 <p>5.媒体会话回调<br>媒体会话回调的主要方法是：onPlay()，onPause()和onStop()。这是用来添加控制播放器代码的地方。由于在程序运行时(onCreate()中)实例化媒体会话，并且还设置了回调，程序可以定义使用不同播放器的可替代回调方法，并根据设备和/或系统级别选择适当的回调/播放器组合。您可以在不更改应用程序的其余部分的情况下更改播放器。例如，您可以在Android4.1（API级别16）或更高版本上运行时使用ExoPlayer，并MediaPlayer在早期系统上使用。</p>
 <p>6.总结<br>这篇博文都是理论性的东西，没有编码实现，较为晦涩难懂，但这是基石，有了这知识点，下一篇音频应用的实例便会很好的理解了。</p>
@@ -311,8 +315,8 @@
 <nav id="article-nav">
   
   
-    <a href="/2018/04/16/媒体会话的使用知识/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">使用Media Session(媒体会话)</div>
+    <a href="/2018/04/13/android多媒体概述/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android多媒体概述</div>
       <i class="icon-circle-right"></i>
     </a>
   
