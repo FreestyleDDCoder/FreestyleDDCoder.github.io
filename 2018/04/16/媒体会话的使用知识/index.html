@@ -6,26 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>采用Hexo+github pages搭建个人博客 | LiangZhan_Blog</title>
+  <title>使用Media Session(媒体会话) | LiangZhan_Blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="采用Hexo+github pages搭建个人博客 liangzhan来源Hexo &amp;nbsp;1.前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;前两天看到黎同学的博客后，忍不住自己想搭一个。搭好博客后总是想着写点神马。那就把Hexo+github         pages搭建个人博客的过程写一下，以供大家参考吧！">
-<meta name="keywords" content="Hexo">
+  <meta name="description" content="liangzhan  1.前言上一篇博文中已经了解了Android中的多媒体与及其架构，也知道了界面与播放器之间是通过媒体控制和媒体会话之间的回调来进行数据的传输与控制。在这一篇博文中，将会了解媒体会话的使用相关知识。">
+<meta name="keywords" content="media">
 <meta property="og:type" content="article">
-<meta property="og:title" content="采用Hexo+github pages搭建个人博客">
-<meta property="og:url" content="http://yoursite.com/2018/04/10/采用Hexo-github-pages搭建个人博客/index.html">
+<meta property="og:title" content="使用Media Session(媒体会话)">
+<meta property="og:url" content="http://yoursite.com/2018/04/16/媒体会话的使用知识/index.html">
 <meta property="og:site_name" content="LiangZhan_Blog">
-<meta property="og:description" content="采用Hexo+github pages搭建个人博客 liangzhan来源Hexo &amp;nbsp;1.前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;前两天看到黎同学的博客后，忍不住自己想搭一个。搭好博客后总是想着写点神马。那就把Hexo+github         pages搭建个人博客的过程写一下，以供大家参考吧！">
+<meta property="og:description" content="liangzhan  1.前言上一篇博文中已经了解了Android中的多媒体与及其架构，也知道了界面与播放器之间是通过媒体控制和媒体会话之间的回调来进行数据的传输与控制。在这一篇博文中，将会了解媒体会话的使用相关知识。">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/myimage/blogExample1.png">
-<meta property="og:image" content="http://yoursite.com/myimage/blogrepository.png">
-<meta property="og:image" content="http://yoursite.com/myimage/bloggithubsetting.png">
-<meta property="og:image" content="http://yoursite.com/myimage/bloggithubpage.png">
-<meta property="og:image" content="http://yoursite.com/myimage/mygithubblog.png">
-<meta property="og:updated_time" content="2018-04-10T13:24:28.856Z">
+<meta property="og:updated_time" content="2018-04-16T03:32:54.324Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="采用Hexo+github pages搭建个人博客">
-<meta name="twitter:description" content="采用Hexo+github pages搭建个人博客 liangzhan来源Hexo &amp;nbsp;1.前言&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;前两天看到黎同学的博客后，忍不住自己想搭一个。搭好博客后总是想着写点神马。那就把Hexo+github         pages搭建个人博客的过程写一下，以供大家参考吧！">
-<meta name="twitter:image" content="http://yoursite.com/myimage/blogExample1.png">
+<meta name="twitter:title" content="使用Media Session(媒体会话)">
+<meta name="twitter:description" content="liangzhan  1.前言上一篇博文中已经了解了Android中的多媒体与及其架构，也知道了界面与播放器之间是通过媒体控制和媒体会话之间的回调来进行数据的传输与控制。在这一篇博文中，将会了解媒体会话的使用相关知识。">
   
     <link rel="alternative" href="/atom.xml" title="LiangZhan_Blog" type="application/atom+xml">
   
@@ -149,95 +143,48 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-采用Hexo-github-pages搭建个人博客" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-媒体会话的使用知识" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      采用Hexo+github pages搭建个人博客
+      使用Media Session(媒体会话)
     </h1>
   
 
         
-        <a href="/2018/04/10/采用Hexo-github-pages搭建个人博客/" class="archive-article-date">
-  	<time datetime="2018-04-10T01:55:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-10</time>
+        <a href="/2018/04/16/媒体会话的使用知识/" class="archive-article-date">
+  	<time datetime="2018-04-16T01:06:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-16</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <blockquote><p>采用Hexo+github pages搭建个人博客</p>
-<footer><strong>liangzhan</strong><cite><a href="https://hexo.io/zh-cn/docs/index.html" target="_blank" rel="noopener">来源Hexo</a></cite></footer></blockquote>
-<p>&nbsp;1.前言<br>&ensp;&ensp;&ensp;&ensp;&ensp;前两天看到黎同学的博客后，忍不住自己想搭一个。搭好博客后总是想着写点神马。那就把Hexo+github         pages搭建个人博客的过程写一下，以供大家参考吧！<br><a id="more"></a><br>&nbsp;2.Hexo简介<br>&ensp;&ensp;&ensp;&ensp;&ensp;Hexo是一个快速、简洁且高效的博客框架。Hexo使用Markdown（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
-<p>&nbsp;3.安装前提git和node.js<br>&ensp;&ensp;&ensp;&ensp;&ensp;安装 Hexo 相当简单。然而在安装前，您必须检查电脑中是否已安装下列应用程序：<br>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://nodejs.org/en/" title="node.js" target="_blank" rel="noopener">node.js</a><br>&ensp;&ensp;&ensp;&ensp;&ensp;<a href="https://git-scm.com/" title="git" target="_blank" rel="noopener">git</a><br>&ensp;&ensp;&ensp;&ensp;&ensp;如果你的电脑中已经安装了这两样，那么接下来在终端执行下面的指令即可进行hexo的安装。</p>
-<blockquote>
-<p>npm install -g hexo-cli</p>
+        <blockquote>
+<p>liangzhan</p>
 </blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;如果没有安装git和node.js的话，可以查看<a href="https://hexo.io/zh-cn/docs/index.html" title="hexo" target="_blank" rel="noopener">git和node.js安装</a>，这里不进行过多的阐述。</p>
-<p>&nbsp;4. 建立网站<br>&ensp;&ensp;&ensp;&ensp;&ensp;安装 Hexo 完成后，请执行下列命令，Hexo 将会在指定文件夹中新建所需要的文件。</p>
+<p>1.前言<br>上一篇博文中已经了解了Android中的多媒体与及其架构，也知道了界面与播放器之间是通过媒体控制和媒体会话之间的回调来进行数据的传输与控制。在这一篇博文中，将会了解媒体会话的使用相关知识。<a id="more"></a>媒体会话依赖其管理者的生命周期，所以应该在activity或者是服务Service的onCreate()方法中初始化媒体会话。</p>
 <blockquote>
-<p>hexo init folder<br>cd folder<br>npm install<br>注明：folder为用户自己命名指定的文件夹，用于存放网站文件</p>
+<p>上篇博文中说过，媒体应用的最佳做法是使用Media-compat库，在本篇博文中，术语”Media Session”表示实例MediaSessionCompat，”Media Controller”表示实例MediaControllerCompat。</p>
 </blockquote>
-<p>新建完成后，通过cd进入上面建立网站的folder目录。执行以下指令，然后在浏览器打开<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000</a>即可浏览到Hexo博客的样式了。</p>
-<blockquote>
-<p>hexo server</p>
-</blockquote>
-<p>创建成功后用户指定的文件夹目录结构如下：</p>
-<blockquote>
-<p>├── _config.yml<br>├── package.json<br>├── scaffolds<br>├── source<br>|   ├── _drafts<br>|   └── _posts<br>└── themes</p>
-</blockquote>
-<p>首先配置_config.yml，这里需要注意的是，每一项配置”:”的后面都要留下一个空格。不然编译不通过。<br><img src="/myimage/blogExample1.png"><br>以下为_config.yml主要配置：</p>
-<blockquote>
-<p>title: &ensp;这里填写博客的名称<br>subtitle: &ensp;填写座右铭<br>author: &ensp;你的名字<br>……<br>deploy:<br>type: git<br>repository: github远程仓库的名字（下面将会说明如何获取）<br>branch: master</p>
-</blockquote>
-<p>配置完成记得保存。更多相关属性详见<a href="https://hexo.io/zh-cn/docs/configuration.html" target="_blank" rel="noopener">配置</a></p>
-<p>&nbsp;5.GitHub<br>&ensp;&ensp;&ensp;&ensp;&ensp;如果没有账号就注册一个。登录后新建一个repository。命名方式为xx.github.io,其中xx必须为你的github账户名。创建成功后把你的仓库HTTPS或者SSH的URL复制下来填入_config.yml中的&ensp;repository:&ensp;URL保存即可。<br><img src="/myimage/blogrepository.png"></p>
-<p>&nbsp;6.提交更改<br>&ensp;&ensp;&ensp;&ensp;&ensp;通过以下指令新建一篇名为My New Post的博文。执行成功后，进入网站文件存放目录下的/source/_posts/中，你会发现多了一个名为My New Post.md的文件。</p>
-<blockquote>
-<p>hexo new “My New Post”</p>
-</blockquote>
-<p>My New Post.md的文件，用文本编辑器软件打开，内容如下：</p>
-<blockquote>
-<p>title: &ensp;博客标题<br>date: 2018-04-10 09:55:02<br>comments:<br>tags: &ensp;定义这条博客的标签<br>categories: &ensp;定义这条博客的分类</p>
-</blockquote>
-<p>&ensp;&ensp;&ensp;&ensp;&ensp;这条博客的内容也直接写在此文件中。推荐采用Cmd Markdown来编辑此文件。编辑完成之后，执行以下指令后，在浏览器输入地址<a href="http://localhost:4000" target="_blank" rel="noopener">http://localhost:4000</a>即可在本地查看到写好的博文了。</p>
-<blockquote>
-<p>hexo clean<br>hexo generate<br>hexo server</p>
-</blockquote>
-<p>&nbsp;7.部署到GitHub上<br>&ensp;&ensp;&ensp;&ensp;&ensp;在步骤5过程中，我们已经配置好了GitHub远程仓库。所以终端执行以下指令，shu你的GitHub账号，密码后即可更新博客到GitHub上。</p>
-<blockquote>
-<p>hexo deploy</p>
-</blockquote>
-<p>当出现以下提示时，表明提交成功！</p>
-<blockquote>
-<p>INFO  Deploy done: git</p>
-</blockquote>
-<p>打开GitHub，进入远程仓库，点击setting，往下拉，在GitHub Pages处会提示Your site is published at http://你的GitHub账号.github.io/，这就是你的博客地址了。 提交的话需要等会才会显示网站。</p>
-<p>hexo deploy后可能会出现以下错误：</p>
-<blockquote>
-<p>ERROR Deployer not found : github </p>
-</blockquote>
-<p>这时终端输入以下命令后再进行hexo g，hexo d即可：</p>
-<blockquote>
-<p>npm install hexo-deployer-git –save</p>
-</blockquote>
-<p>截图展示：</p>
-<blockquote>
-<p>setting</p>
-</blockquote>
-<img src="/myimage/bloggithubsetting.png">
-<blockquote>
-<p>往下拉页面即可看到GitHub Pages</p>
-</blockquote>
-<img src="/myimage/bloggithubpage.png">
-<blockquote>
-<p>我搭好的博客</p>
-</blockquote>
-<img src="/myimage/mygithubblog.png">
-<p>&nbsp;8.可能出现的问题<br>&nbsp;今天先写这些，有问题可以在评论区交流。</p>
+<p>2.初始化媒体会话<br>一个新建的媒体会话实例是不具备媒体会话的功能的。必须完成以下步骤来实现媒体会话的初始化：<br>(1)设置标志flag，使得媒体会话可以从媒体控制器和媒体按钮接收回调。<br>(2)创建并初始化实例PlaybackStateCompat，并将其指定给媒体会话。在整个媒体会话过程中播放状态都会发生改变，所以建议缓存PlaybackStateCompat.Builder以便重用。<br>(3)创建一个MediaSessionCompat.Callback实例，并将其指定给媒体会话。<br>为了在媒体应用程序重新初始化（或停止）时媒体按钮能够正常工作，PlaybackState必须包含一个play action与媒体按钮发送的intent相匹配。这就是为什么在媒体会话状态初始化的时候要把ACTION_PLAY指定给它。</p>
+<p>3.保持播放状态和元数据<br>这里有2个类来表示媒体会话的状态。<br>(1)PlaybackStateCompat,描述当前播放器的运作状态，它包含：</p>
+<ul>
+<li>The transport state 传输状态(播放器是否正在播放/暂停/缓冲等)</li>
+<li>当适当的时候出现错误的代码和任意的错误信息。</li>
+<li>The player position 播放器位置</li>
+<li>有效的controller actions，能够处理当前状态。<br>(2)MediaMetadataCompat,描述正在播放的数据源：</li>
+<li>艺术家，专辑和曲目的名称</li>
+<li>曲目的持续时间</li>
+<li>在屏锁界面上显示专辑封面。该图像是一个最大尺寸为320×320dp的位图（如果较大则缩小）</li>
+<li>它的一个实例<a href="https://developer.android.google.cn/reference/android/content/ContentUris.html" target="_blank" rel="noopener">ContentUris</a>指向更大版本的插图封面。<br>播放状态和元数据可以在整个媒体会话中发生改变。每当播放状态或者元数据发生改变的时候，必须为其对应的类使用相应的构建器builder，PlaybackStateCompat.Builder()或者MediaMetadataCompat.Builder(), 然后通过调用setPlaybackState()或者setMetaData()来把新的实例传递给媒体会话MediaSession。为了减少这些频繁的操作，这里建议最好创建一次构建器builder，然后在整个会话的整个声明周期中重用它。</li>
+</ul>
+<p>4.状态和错误<br>这里注意，PlaybackState是一个包含了用于媒体会话(getState()获取)播放状态的唯一值对象，并且必要的时候还包含关联错误代码(getErrorCode()获取)。这些错误可能是致命的也可能是非致命的。无论何时当播放中断，我们都应该生成一个致命错误：将传输状态设置为STATE_ERROR并指定相关的错误setErrorMessage(int, CharSequence)。如果播放被错误阻塞了，PlaybackState应该接着报告STATE_ERROR和错误。当应用程序无法处理请求，但仍然可以继续播放，则此时发生非致命错误：传输保持“正常”状态（如STATE_PLAYING），但PlaybackState存在着错误代码。例如，如果上一首歌曲正在播放，并且用户请求跳到下一首歌曲，则可以继续播放，但这里应该创建一个新的PlaybackState错误代码ERROR_CODE_END_OF_QUEUE然后再调用setPlaybackState()。连接到媒体会话的媒体控制器将接收回调onPlaybackStateChanged()并向用户解释发生了什么。非致命错误应该只在发生时报告一次。下一次媒体会话更新时，PlaybackState不要再次设置相同的非致命错误（除非响应新请求发生错误）。</p>
+<p>5.媒体会话回调<br>媒体会话回调的主要方法是：onPlay()，onPause()和onStop()。这是用来添加控制播放器代码的地方。由于在程序运行时(onCreate()中)实例化媒体会话，并且还设置了回调，程序可以定义使用不同播放器的可替代回调方法，并根据设备和/或系统级别选择适当的回调/播放器组合。您可以在不更改应用程序的其余部分的情况下更改播放器。例如，您可以在Android4.1（API级别16）或更高版本上运行时使用ExoPlayer，并MediaPlayer在早期系统上使用。</p>
+<p>6.总结<br>这篇博文都是理论性的东西，没有编码实现，较为晦涩难懂，但这是基石，有了这知识点，下一篇音频应用的实例便会很好的理解了。</p>
 
       
 
@@ -282,7 +229,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">media</a>
         		</li>
       		
 		</ul>
@@ -294,7 +241,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="/categories/Hexo博客搭建//" class="article-tag-list-link color4">Hexo博客搭建</a>
+        			<a href="/categories/Android//" class="article-tag-list-link color3">Android</a>
         		</li>
       		
 		</ul>
@@ -349,7 +296,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/10/采用Hexo-github-pages搭建个人博客/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/16/媒体会话的使用知识/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -363,18 +310,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2018/04/12/关于Window和WindowManager的那些事(一)/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2018/04/16/Media Session(媒体会话)使用概述/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          关于Window和WindowManager的那些事（一）
+          Media Session(媒体会话)使用概述
         
       </div>
     </a>
   
   
-    <a href="/2018/04/10/ Hello world/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hello world</div>
+    <a href="/2018/04/13/android多媒体概述/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">android多媒体概述</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -404,7 +351,7 @@
   
 
   
-  <div id="SOHUCS" sid="采用Hexo-github-pages搭建个人博客" ></div> 
+  <div id="SOHUCS" sid="媒体会话的使用知识" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
